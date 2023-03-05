@@ -1,13 +1,15 @@
 package logic
 
 import (
+	"monitor/monitor/internal/config"
 	"monitor/monitor/internal/types"
 )
 
-type propertyMsgStrategy struct{}
+type propertyMsgStrategy struct {
+}
 
-func (p *propertyMsgStrategy) loadData() ([]types.MessageProperties, error) {
-	return nil, nil
+func (p *propertyMsgStrategy) LoadData() ([]types.MessageProperties, error) {
+	return config.GetMonitor().Msg, nil
 }
 
 func (p *propertyMsgStrategy) Scheme() string {

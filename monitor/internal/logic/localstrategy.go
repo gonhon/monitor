@@ -12,7 +12,7 @@ import (
 
 type localMsgStrategy struct{}
 
-func (l *localMsgStrategy) loadData() ([]types.MessageProperties, error) {
+func (l *localMsgStrategy) LoadData() ([]types.MessageProperties, error) {
 	jsonFile, err := os.Open("D:\\project\\go_project\\monitor\\source.json")
 	// 最好要处理以下错误
 	if err != nil {

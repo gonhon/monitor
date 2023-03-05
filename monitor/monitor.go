@@ -27,6 +27,8 @@ func main() {
 	ctx := svc.NewServiceContext(c)
 	handler.RegisterHandlers(server, ctx)
 
+	config.RegisterProperty(ctx.Config.Monitor)
+
 	logic.RegisterSchedule(ctx)
 
 	fmt.Printf("Starting server at %s:%d...\n", c.Host, c.Port)

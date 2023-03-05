@@ -3,7 +3,7 @@ Host: 0.0.0.0
 Port: 8888
 
 Monitor:
-  Mode: local
+  Mode: 'property'
   FilePath: '/home/file/source.json'
   Timeout: 2000
   # 推送消息的机器人地址

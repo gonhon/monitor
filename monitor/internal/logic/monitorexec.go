@@ -22,7 +22,7 @@ var (
 
 // 加载数据
 type LoadMsgStrategy interface {
-	loadData() ([]types.MessageProperties, error)
+	LoadData() ([]types.MessageProperties, error)
 	Scheme() string
 }
 
@@ -37,14 +37,13 @@ func init() {
 }
 
 func RegisterSchedule(serverCtx *svc.ServiceContext) {
-
 	mode := serverCtx.Config.Monitor.Mode
 
 	strategy, ok := m[mode]
 	if !ok {
 		logx.Error("")
 	}
-	msgs, err := strategy.loadData()
+	msgs, err := strategy.LoadData()
 	if err != nil {
 		logx.Error(err)
 	}
