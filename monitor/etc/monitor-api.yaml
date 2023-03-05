@@ -1,0 +1,23 @@
+Name: monitor-api
+Host: 0.0.0.0
+Port: 8888
+
+Monitor:
+  Mode: local
+  FilePath: '/home/file/source.json'
+  Timeout: 2000
+  # 推送消息的机器人地址
+  SendUrl: 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b8d69732-5d51-40be-882b-fb85749de81c'
+  Msg:
+  - Url: 'https://www.baidu.com/'
+    Name: '百度'
+    Message: 'xxx消息2'
+    Phones: [ '15871268712' ]
+  - Url: 'https://ys.wsjcsw.com/nethallWetChathtml/#/'
+    Name: 'XX项目1'
+    Message: 'xxx消息1'
+    Phones: [ '15871268712' ]
+  - Url: 'http://172.26.252.210:8000/swagger/admin/index.html'
+    Name: 'admin'
+    Message: 'admin请求失败'
+    Phones: [ '15871268712' ]

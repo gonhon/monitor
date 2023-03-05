@@ -1,0 +1,15 @@
+type (
+	MessageProperties {
+		Url     string   `json:"url"`
+		Name    string   `json:"name"`
+		Timeout int   `json:"timeout"`
+		Method  string   `json:"method"`
+		Message string   `json:"message"`
+		Phones  []string `json:"phones"`
+	}
+)
+
+service monitor-api {
+	@handler getMsg
+	get /monitor/msg returns ([]MessageProperties)
+}
