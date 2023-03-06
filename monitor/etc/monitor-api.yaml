@@ -17,7 +17,7 @@ Monitor:
     Name: 'XX项目1'
     Message: 'xxx消息1'
     Phones: [ '15871268712' ]
-  - Url: 'http://172.26.252.210:8000/swagger/admin/index.html'
+  - Url: 'http://172.26.252.125:8000/swagger/admin/index.html'
     Name: 'admin'
     Message: 'admin请求失败'
     Phones: [ '15871268712' ]
